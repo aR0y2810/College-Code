@@ -14,11 +14,10 @@ int main(int argc, char *argv[])
                 printf("No file content");
                 return 0;
         }
-        int c;
+        char c;
         while ((c = fgetc(fp1)) != EOF)
                 fputc(c, fp2);
         fclose(fp1);
         fclose(fp2);
         return 0;
 }
-~
