@@ -15,11 +15,15 @@ int main(int argc, char *argv[])
                 return 0;
         }
         char c1,c2;
-        while ((c1 = fgetc(fp1)) != EOF || (c2 = fgetc(fp2)) != EOF)
+        while ((c1 = fgetc(fp1)) != EOF && (c2 = fgetc(fp2)) != EOF)
         {
                 if (c1!=c2)
+                {
+                        printf ("Mismatch");
                         return 0;
+                }
         }
+        printf ("Match");
         fclose(fp1);
         fclose(fp2);
         return 1;
